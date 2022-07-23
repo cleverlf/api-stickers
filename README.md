@@ -33,13 +33,22 @@ Aplicação acessível por qualquer pessoa, fazendo o deploy na nuvem.
 
 ## Acesso ao projeto
 
-**https://github.com/cleverlf/linguagem-api.git**
+**https://github.com/cleverlf/linguagem-api.git** - Minha API na nuvem
+**https://github.com/cleverlf/api-stickers.git** - Consumindo API publicas
 
 ## Técnicas e tecnologias utilizadas
 
-- ``Java 8``
-- ``InteliJ IDEA``
+- ``Java``
+- ``Visual Studio Code``
 - ``Paradigma de orientação a objetos``
+- ``Maven``
+- ``Spring Boot``
+- ``MongoDB``
+- ``Heroku``
+- ``Gson``
+- ``TMDB API``
+- ``Nasa API``
+- ``Marvel API``
 
 ## Links citados
 
