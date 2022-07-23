@@ -33,9 +33,12 @@ Aplicação acessível por qualquer pessoa, fazendo o deploy na nuvem.
 
 ## Acesso ao projeto
 
-**https://github.com/cleverlf/linguagem-api.git** - Minha API na nuvem
 
-**https://github.com/cleverlf/api-stickers.git** - Consumindo API publicas
+
+| [api-stickers.git](https://github.com/cleverlf/api-stickers.git) |     [linguagem-api.git](https://github.com/cleverlf/linguagem-api.git)      |
+|:----------------------------------------------------------------:|:---------------------------------------------------------------------------:|
+|                                                                  | [Minha API na nuvem](https://api-alura-linguagens.herokuapp.com/linguagens) |
+
 
 ## Técnicas e tecnologias utilizadas
 
