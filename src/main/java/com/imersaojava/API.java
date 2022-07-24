@@ -1,5 +1,7 @@
 package com.imersaojava;
 
+import java.util.Scanner;
+
 public enum API {
 
     // docs
@@ -11,7 +13,9 @@ public enum API {
     NASA("https://api.nasa.gov/planetary/apod?api_key=" + new ApiKey().getNasaKey()
             + "&start_date=2022-06-01&end_date=2022-06-30"),
     MARVEL("https://gateway.marvel.com/v1/public/characters?ts=" + new ApiKey().getTimeStamp() + "&apikey="
-            + new ApiKey().getMarvelPublicKey() + "&hash=" + new ApiKey().md5() + "&limit=100");
+            + new ApiKey().getMarvelPublicKey() + "&hash=" + new ApiKey().md5() + "&limit=100"),
+    MARVEL_NAME("https://gateway.marvel.com/v1/public/characters?ts=" + new ApiKey().getTimeStamp() + "&apikey="
+            + new ApiKey().getMarvelPublicKey() + "&hash=" + new ApiKey().md5() + "&nameStartsWith=" + inputName());
 
     private String url;
 
@@ -22,6 +26,16 @@ public enum API {
 
     public String url() {
         return url;
+    }
+
+    public static String inputName() {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Type a Marvel character name: ");
+        String characterName = in.next();
+
+        return characterName;
+        
+
     }
 
 }

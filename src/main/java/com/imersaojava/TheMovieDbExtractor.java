@@ -29,10 +29,13 @@ public class TheMovieDbExtractor implements Extractor {
             String rating = Double.toString(result.getVote_average());
 
             System.out.println(
-                    "Titulo: " + TERMINALFORMAT.BRIGHT_GREEN + result.getOriginal_title() + TERMINALFORMAT.RESET);
-            System.out.println("Imagem - Url: " + TERMINALFORMAT.BRIGHT_AZUL + image + TERMINALFORMAT.RESET);
+                    "Titulo: " + TERMINALFORMAT.BRIGHT_GREEN.getS() + result.getOriginal_title()
+                            + TERMINALFORMAT.RESET.getS());
             System.out.println(
-                    "Nota: " + TERMINALFORMAT.BRIGHT_YELLOW + rating + ratingStars(rating) + TERMINALFORMAT.RESET);
+                    "Imagem - Url: " + TERMINALFORMAT.BRIGHT_AZUL.getS() + image + TERMINALFORMAT.RESET.getS());
+            System.out.println(
+                    "Nota: " + TERMINALFORMAT.BRIGHT_YELLOW.getS() + rating + ratingStars(rating)
+                            + TERMINALFORMAT.RESET.getS());
             System.out.println();
 
             InputStream inputStream = new URL(image).openStream();

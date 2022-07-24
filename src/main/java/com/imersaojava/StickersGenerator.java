@@ -30,10 +30,10 @@ public class StickersGenerator {
         graphics.drawImage(originalImage, 0, 0, width, height, null);
 
         // configurar a fonte e escrever uma frase na nova imagem
-        String text = "TOPZERA";
-        Font font = new Font("Impact", Font.BOLD, 37);
+        String signature = fileName.replaceAll(formatName, "");
+        Font font = new Font("Comic Sans MS", Font.PLAIN, 20);
 
-        TextLayout textLayout = new TextLayout(text, font, graphics.getFontRenderContext());
+        TextLayout textLayout = new TextLayout(signature, font, graphics.getFontRenderContext());
         Shape shape = textLayout.getOutline(null);
 
         graphics.setColor(Color.BLACK);
@@ -41,7 +41,7 @@ public class StickersGenerator {
 
         FontMetrics phraseSize = graphics.getFontMetrics(font);
 
-        float x = ((float) (newImage.getWidth() / 2) - ((float) phraseSize.stringWidth(text)) / 2);
+        float x = ((float) (newImage.getWidth() / 2) - ((float) phraseSize.stringWidth(signature)) / 2);
         int y = newImage.getHeight() - 10;
 
         graphics.translate(x, y);
@@ -56,5 +56,6 @@ public class StickersGenerator {
         ImageIO.write(newImage, "png", new File("stickers/" + fileName));
 
     }
+    
 
 }

@@ -24,11 +24,13 @@ public class MarvelExtractor implements Extractor {
         for (Result result : personagens) {
 
             String formatName = "." + result.thumbnail.getExtension();
-            String fileName = result.getName() + formatName;
+            String fileName = result.getName().replaceAll("/", "-") + formatName;
             String image = result.getThumbnail().getPath() + formatName;
 
-            System.out.println("Titulo: " + TERMINALFORMAT.BRIGHT_GREEN + result.getName() + TERMINALFORMAT.RESET);
-            System.out.println("Imagem - Url: " + TERMINALFORMAT.BRIGHT_AZUL + image + TERMINALFORMAT.RESET);
+            System.out.println(
+                    "Titulo: " + TERMINALFORMAT.BRIGHT_GREEN.getS() + result.getName() + TERMINALFORMAT.RESET.getS());
+            System.out.println(
+                    "Imagem - Url: " + TERMINALFORMAT.BRIGHT_AZUL.getS() + image + TERMINALFORMAT.RESET.getS());
             System.out.println();
 
             InputStream inputStream = new URL(image).openStream();
@@ -39,5 +41,6 @@ public class MarvelExtractor implements Extractor {
         }
 
     }
+    
 
 }
