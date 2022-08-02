@@ -30,7 +30,9 @@ Aplicação acessível por qualquer pessoa, fazendo o deploy na nuvem.
 - `Funcionalidade 1`:  Stickers no WhatsApp
 > ![](https://i.imgur.com/Sbku1Zv.jpg)
 
-- `Funcionalidade 2`: descrição da funcionalidade 2
+- `Funcionalidade 2`: Terminal personalizado
+> ![](https://i.imgur.com/4nSouEj.png)
+
 - `Funcionalidade 3`: descrição da funcionalidade 3
 
 ## Acesso ao projeto
