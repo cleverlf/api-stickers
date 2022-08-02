@@ -5,15 +5,18 @@ public class App {
     // https://jsonutils.com/
     public static void main(String[] args) throws Exception {
 
-        API myApi = API.MARVEL_NAME;
+        API myApi = API.NASA;
 
         ClienteHttp http = new ClienteHttp();
 
         String json = http.searchData(myApi.url());
 
-        // new NasaExtractor().extract(json);
-        // new TheMovieDbExtractor().extract(json);
-        new MarvelExtractor().extract(json);
+        new NasaExtractor().extract(json);
+        //new TheMovieDbExtractor().extract(json);
+        //new MarvelExtractor().extract(json);
+
+        
+         
 
     }
 

@@ -24,7 +24,13 @@ public class TheMovieDbExtractor implements Extractor {
         for (Result result : films) {
 
             String formatName = ".png";
-            String fileName = result.getOriginal_title() + formatName;
+            String fileName;
+            if (result.getOriginal_title() == null) {
+                fileName = result.getOriginal_title() + formatName;
+            } else {
+                fileName = result.getOriginal_title().replaceAll(":", "-") + formatName;
+            }
+             
             String image = "https://image.tmdb.org/t/p/w500" + result.getPoster_path();
             String rating = Double.toString(result.getVote_average());
 
@@ -52,7 +58,7 @@ public class TheMovieDbExtractor implements Extractor {
         String stars = "";
         for (int i = 0; i < Math.floor(Double.parseDouble(rating)); i++) {
 
-            stars = stars + " " + TERMINALFORMAT.STAR;
+            stars += " " + TERMINALFORMAT.STAR;
 
         }
 

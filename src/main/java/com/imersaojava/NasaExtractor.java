@@ -20,8 +20,13 @@ public class NasaExtractor implements Extractor {
 
         for (NasaContent result : atribute) {
             String formatName = ".png";
-            String fileName = result.getTitle() + formatName;
-            String image = result.getHdurl();
+            String fileName = result.getTitle().replaceAll(":", "-").replaceAll("/", "-") + formatName;
+            String image;
+            if (result.getHdurl() != null) {
+                image = result.getHdurl();
+            } else {
+                continue;
+            } 
 
             System.out.println(
                     "Titulo: " + TERMINALFORMAT.BRIGHT_GREEN.getS() + result.getTitle() + TERMINALFORMAT.RESET.getS());

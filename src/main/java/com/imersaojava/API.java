@@ -34,7 +34,6 @@ public enum API {
         String characterName = in.next();
 
         return characterName;
-        
 
     }
 
